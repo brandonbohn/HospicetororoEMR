@@ -1,0 +1,258 @@
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin: 0.5rem 0;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
+  font-weight: 500;
+}
+
+.btn-back:hover {
+  transform: translateX(-4px);
+}
+
+.page-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  min-width: 250px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Inventory Grid */
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.inventory-category h3 {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.inventory-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inventory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 3px solid #cbd5e1;
+}
+
+.item-name {
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.item-stock {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.stock-good {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.stock-low {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.stock-critical {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.inventory-note {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: #f0f9ff;
+  border-left: 3px solid #3b82f6;
+  font-size: 0.9rem;
+  color: #1e40af;
+}
+
+/* MAR (Medication Administration Record) */
+.mar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mar-entry {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mar-header {
+  background: #f8fafc;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mar-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.mar-date {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.mar-items {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mar-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 100px;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.mar-time {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.mar-drug {
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.mar-staff {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.mar-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.status-given {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.wireframe-note {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border: 2px dashed #3b82f6;
+  border-radius: 6px;
+  text-align: center;
+  color: #1e40af;
+  font-size: 0.9rem;
+}
+
+/* Alert Banner */
+.alert-banner {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.alert-warning {
+  background: #fef3c7;
+  border: 1px solid #fde047;
+  color: #92400e;
+}
+
+.alert-banner strong {
+  margin-right: 0.5rem;
+}
+
+.alert-banner span {
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mar-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .mar-time {
+    font-size: 1rem;
+  }
+
+  .alert-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-input {
+    min-width: 100%;
+  }
+}
